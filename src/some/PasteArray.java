@@ -1,3 +1,5 @@
+package some;
+
 public class PasteArray {
 
     public int[] pasteNumberInArray(int[] arr, int index, int number) {
