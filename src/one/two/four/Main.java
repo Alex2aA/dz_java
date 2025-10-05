@@ -5,25 +5,23 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Employee e1 = new Employee();
-        Employee e2 = new Employee();
-        Employee e3 = new Employee();
-        Department department = new Department();
-        e1.name = "Ваня";
-        department.name = "Веб-программирование";
-        department.owner = e1;
-        e1.department = department;
-        e2.name = "Леша";
-        e2.department = department;
-        e3.name = "Ваня";
-        e3.department = department;
+        Employee ivan = new Employee("Иван");
+        Employee petr = new Employee("Петр");
+        Employee maria = new Employee("Мария");
 
-        department.employees = new ArrayList<>() {{
-           add(e1);
-           add(e2);
-           add(e3);
-        }};
+        Department itDepartment = new Department("IT отдел");
 
-        System.out.println(department.getAllEmployees(e3));
+        itDepartment.setOwner(ivan);
+
+        itDepartment.addEmployee(petr);
+        itDepartment.addEmployee(maria);
+
+        System.out.println(itDepartment);
+        System.out.println();
+        System.out.println(itDepartment.getAllEmployees());
+        System.out.println();
+        System.out.println(ivan);
+        System.out.println(petr);
+        System.out.println(maria);
     }
 }

@@ -15,12 +15,15 @@ public class PersonInfo {
 
     public String toString() {
         String res = "";
-        if(name.secondName != null && name.thirdName != null) res += name.secondName + " " + name.firstName + " " + name.thirdName + " ";
+        String firstName = name.getFirstName();
+        String secondName = this.name.getSecondName();
+        String thirdName = this.name.getThirdName();
+        if(secondName != null && thirdName != null) res += secondName + " " + firstName + " " + thirdName + " ";
         else {
-            if(name.secondName == null) res += dad.name.secondName + " ";
-            res += name.firstName + " ";
-            if(name.thirdName == null) res += dad.name.thirdName + "ович" + " ";
-            else res += name.thirdName + " ";
+            if(secondName == null) res += dad.name.getSecondName() + " ";
+            res += this.name.getFirstName() + " ";
+            if(this.name.getThirdName() == null) res += dad.name.getThirdName() + "ович" + " ";
+            else res += this.name.getThirdName() + " ";
         }
         return res;
     }
