@@ -1,10 +1,11 @@
 package Pistol;
 
-public class Pistol {
+public class Pistol extends Weapon {
     private int bullets;
     private final int maxCapacity;
 
     public Pistol(int maxCapacity) {
+        super(maxCapacity);
         if (maxCapacity <= 0) {
             throw new IllegalArgumentException("Максимальная вместимость должна быть положительной");
         }

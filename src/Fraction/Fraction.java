@@ -1,6 +1,6 @@
 package Fraction;
 
-public final class Fraction {
+public final class Fraction extends Number{
     private int numerator;
     private int denominator;
 
@@ -79,4 +79,24 @@ public final class Fraction {
 
     public int getNumerator() { return numerator; }
     public int getDenominator() { return denominator; }
+
+    @Override
+    public int intValue() {
+        return 0;
+    }
+
+    @Override
+    public long longValue() {
+        return 0;
+    }
+
+    @Override
+    public float floatValue() {
+        return 0;
+    }
+
+    @Override
+    public double doubleValue() {
+        return 0;
+    }
 }

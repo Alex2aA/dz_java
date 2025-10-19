@@ -1,18 +1,16 @@
 package Point;
 
-public final class Point3D extends Point{
-    private int z;
-
-    public Point3D(int x, int y, int z){
-        super(x,y);
-        this.z = z;
+public class Point3D extends AbstractPoint{
+    public Point3D(int x, int y, int z) {
+        super(x, y, z);
     }
 
-    public int getZ() {
-        return z;
-    }
+    public int getX() { return coordinates.get(0); }
+    public int getY() { return coordinates.get(1); }
+    public int getZ() { return coordinates.get(2); }
 
-    public void setZ(int z) {
-        this.z = z;
+    @Override
+    public String toString() {
+        return "(" + getX() + ", " + getY() + ", " + getZ() + ")";
     }
 }
