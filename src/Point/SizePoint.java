@@ -1,9 +1,9 @@
 package Point;
 
-public class SizeFeature extends AbstractFeature{
+public class SizePoint extends AbstractFeature{
     private double size;
-    public SizeFeature(double size) {
-        super("Размер");
+    public SizePoint(double size) {
+        super("size");
         this.size = size;
     }
 

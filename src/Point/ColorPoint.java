@@ -1,9 +1,9 @@
 package Point;
 
-public class ColorFeature extends AbstractFeature{
+public class ColorPoint extends AbstractFeature{
     private String color;
-    public ColorFeature(String color) {
-        super("Цвет");
+    public ColorPoint(String color) {
+        super("Color");
         this.color = color;
     }
 

@@ -1,20 +1,18 @@
 package Figure;
 
-public class Rectangle extends  Figure {
-    private int a;
-    private int b;
-    private int c;
-    private int d;
+import Point.Point2D;
 
-    public Rectangle(int a, int b, int c, int d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
+import java.util.List;
+
+public class Rectangle extends  Figure {
+    private List<Point2D> point2D;
+
+    public Rectangle(List<Point2D> point2D) {
+        super(point2D);
     }
 
     @Override
     public int getArea() {
-        return a*b;
+        return 0;
     }
 }

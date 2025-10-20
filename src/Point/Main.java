@@ -6,17 +6,17 @@ public class Main {
         Point3D p3 = new Point3D(4, 2, 5);
 
         CustomPoint pColor = new CustomPoint(3);
-        pColor.addFeature(new ColorFeature("красный"));
+        pColor.addFeature(new ColorPoint("red"));
 
         CustomPoint pBig = new CustomPoint(4, 2, 5);
-        pBig.addFeature(new SizeFeature(20));
+        pBig.addFeature(new SizePoint(20));
 
         CustomPoint pFancy = new CustomPoint(7, 7);
-        pFancy.addFeature(new ColorFeature("жёлтый"));
-        pFancy.addFeature(new AbstractFeature("ободок") {
+        pFancy.addFeature(new ColorPoint("yellow"));
+        pFancy.addFeature(new AbstractFeature("obod") {
             @Override
             public Object getValue() {
-                return "красный ободок в форме котёнка";
+                return "red obodok v forme sobaki";
             }
         });
 

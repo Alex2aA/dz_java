@@ -20,9 +20,9 @@ public class CustomPoint extends AbstractPoint{
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("Точка " + super.toString());
+        StringBuilder sb = new StringBuilder("Point ");
         if (!features.isEmpty()) {
-            sb.append(" с характеристиками: ");
+            sb.append(" with: ");
             for (AbstractFeature f : features) {
                 sb.append(f).append("; ");
             }
